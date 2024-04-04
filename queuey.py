@@ -49,7 +49,7 @@ class Queuey:
     def clear(self) -> None:
         """ Removes all items from the queue """
         self.q.clear()
-        
+        self.size = 0
 
 def main():
 
