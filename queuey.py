@@ -22,7 +22,7 @@ class Queuey:
 
     def dequeue(self):
         """ Removes the next item in the queue and returns it """
-
+        
         d = []
         if self.size > 0:
             d = self.q[:1]
@@ -43,17 +43,17 @@ class Queuey:
 
     def length(self) -> int:
         """ Returns the size of the queue """
-        return self.size
-
+        return self.size 
+    
 
     def clear(self) -> None:
         """ Removes all items from the queue """
         self.q.clear()
-
+        self.size = 0
 
 def main():
 
-
+    
     q = Queuey(float)
 
     print(f"Expected: None, got: {q.peek()}")
@@ -78,11 +78,11 @@ def main():
     q.enqueue(12.1)
     q.enqueue(17.21)
     print(f"Expected: 3, got: {q.length()}")
-
+    
     print(f"Expected: 8.4, got: {q.peek()}")
     print(f"Expected: 8.4, got: {q.dequeue()}")
     print(f"Expected: 2, got: {q.length()}")
-
+    
     print(f"Expected: 12.1, got: {q.dequeue()}")
     print(f"Expected: 17.21, got: {q.dequeue()}")
     print(f"Expected: None, got: {q.dequeue()}")
